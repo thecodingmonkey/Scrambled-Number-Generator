@@ -14,4 +14,13 @@ describe("generate", function() {
     var secondCall = generator.generate(1000);
     expect(firstCall).not.toEqual(secondCall);
   });
+
+  it("should be a unique array", function() {
+    var output = generator.generate(1000);
+    output = output.sort();
+    // output array and sorting it back into output: duplicates are side by side (n - 1).
+    for (i=0; i < 1000 - 1; i++){
+      expect(output[i]).not.toEqual(i+1);
+    }
+  });
 });
