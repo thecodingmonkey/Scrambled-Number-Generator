@@ -11,7 +11,7 @@ module.exports = {
     while (result.length > 0) {
       var randomCard = (Math.floor( Math.random() * result.length));
       var pulledCard = result.splice(randomCard, 1);
-      randomResult.push(pulledCard);
+      randomResult.push(pulledCard[0]);
     // randomCard: picks a random card, pulledCard: grabs 1 card, 
     // randomResult.push pushes to the second array.
     }
